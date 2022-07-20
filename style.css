@@ -1,7 +1,7 @@
 
 
 body {
-    background-size: border;
-    background-image:url('giphy.gif');
+    background-size:cover ;
+    background-image:url('giphy\ \(2\).gif');
     color: rgb(255, 187, 0);
 }
