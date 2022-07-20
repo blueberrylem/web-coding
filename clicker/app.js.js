@@ -18,9 +18,10 @@ button.onclick = function(){
     console.log(message)
     const sendMessageResponseArea = document.querySelector('.response-to-send-message')
 
+
+    sendMessageResponseArea.textContent = message
 }
-  /////  sendMessageResponseArea.textContent = message
-  /// while (gameIsRunning==true) 
+  /// while (gameIsRunning==true)    
   ///  if (hp==0) {
    ///    gameIsRunning=false
     
