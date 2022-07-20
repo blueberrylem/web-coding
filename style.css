@@ -1,7 +1,7 @@
 
 
 body {
-    background-size:cover ;
-    background-image:url('giphy\ \(2\).gif');
-    color: rgb(255, 187, 0);
+    background-size:contain ;
+    background-image:url('pillager.gif');
+    color: rgb(0, 234, 255);
 }
