@@ -1,14 +1,22 @@
 
 let createButtons = document.querySelector(".createButton")
 let startButton = document.querySelector(".startButton")
+let valueOfSubject = document.querySelector("select").value
+console.log( valueOfSubject)
+function selectorPagesTeleporter(){
+   if (startButton.onclick==true && valueOfSubject == "builder"){
 
-startButton.onclick = function(){
-    if (startButton.onclick=true  class =  maker){
     document.querySelector(".madLibInput").style.display = "block";
     document.querySelector(".startScreen").style.display = "none";
- 
+    
    
-}}
+}else if (startButton.onclick==true && valueOfSubject == "voting") {
+  
+}
+
+
+
+}
 
 
 createButtons.onclick = function(){

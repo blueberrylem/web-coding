@@ -2,6 +2,11 @@
 
 body {
     background-size:contain ;
-    background-image:url('illusion.jfif');
-    color: rgb(0, 234, 255);
+    background-image:url('download.jfif');
+    
+    color: rgb(255, 0, 0);
+
+}
+.madLibInput{
+    display: none;
 }
