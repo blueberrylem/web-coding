@@ -1,10 +1,19 @@
 
 let createButtons = document.querySelector(".createButton")
+let startButton = document.querySelector(".startButton")
 
+startButton.onclick = function(){
+    if (startButton.onclick=true  class =  maker){
+    document.querySelector(".madLibInput").style.display = "block";
+    document.querySelector(".startScreen").style.display = "none";
+ 
+   
+}}
 
 
 createButtons.onclick = function(){
-    
+    document.querySelector(".madLibInput").style.display = "none";
+ 
     let ab1 = document.querySelector(".a1").value
     let ab2 = document.querySelector(".a2").value
     let ab3 = document.querySelector(".a3").value
