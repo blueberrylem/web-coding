@@ -69,6 +69,7 @@ submitButton.onclick = function (){
     console.log("helloWorld") 
 document.querySelector(".submitButton").style.display = "none";
 document.querySelector(".madLibsPrintout").style.display = "none";
+document.querySelector(".trolling").style.display = "block";
 }
 
 
