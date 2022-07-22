@@ -52,9 +52,14 @@ body {
 .selectWho{
     
     display: block;
-    margin: auto;        width: 60%;
+    margin: auto;
+    width: 60%;
     padding: 10px;
     text-align: center;
     padding: 70px 0;
     font-size: xx-large;
+}
+.submitButton{
+    color: cyan;
+    display: none;
 }

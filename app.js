@@ -62,6 +62,50 @@ createButtons.onclick = function(){
     
     
     madLibsPrintout.textContent = message
+    document.querySelector(".submitButton").style.display = "block";
+}
+submitButton.onclick= function () {
+    console.log("helloWorld") 
+document.querySelector(".submitButton").style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // ab1.remove();
     // ab2.remove();
     // ab3.remove();
@@ -82,5 +126,5 @@ createButtons.onclick = function(){
     // ab18.remove();
     // ab19.remove();
     // ab20.remove();
-}
+
 // hello
