@@ -1,5 +1,6 @@
 
 let createButtons = document.querySelector(".createButton")
+let submitButton = document.querySelector(".submitButton")
 let startButton = document.querySelector(".startButton")
 let subjectDropdown = document.querySelector("select")
 // console.log( valueOfSubject)
@@ -64,9 +65,10 @@ createButtons.onclick = function(){
     madLibsPrintout.textContent = message
     document.querySelector(".submitButton").style.display = "block";
 }
-submitButton.onclick= function () {
+submitButton.onclick = function (){
     console.log("helloWorld") 
 document.querySelector(".submitButton").style.display = "none";
+document.querySelector(".madLibsPrintout").style.display = "none";
 }
 
 
