@@ -12,9 +12,11 @@ startButton.onclick= function () {
         document.querySelector(".startScreen").style.display = "none";
     }else if ( subjectDropdown.value == "voting"){
         console.log("voter")
+        document.querySelector(".startScreen").style.display = "none";
         document.querySelector(".loading").style.display = "block";
-        
-
+        let startmessage="Press S To Start"
+        const pressSStart  = document.querySelector('.pressSStart')
+        pressSStart.textContent=startmessage
 
     }
 }
