@@ -14,10 +14,20 @@ startButton.onclick= function () {
         console.log("voter")
         document.querySelector(".startScreen").style.display = "none";
         document.querySelector(".loading").style.display = "block";
-        let startmessage="Press S To Start"
+        let startmessage="Press any key To Start"
         const pressSStart  = document.querySelector('.pressSStart')
         pressSStart.textContent=startmessage
+        document.onkeydown=function () {
+            console.log("dkfjadkfjdlakfjadslfkja;sdlkfj;dlaskjfldkjas;f");
+            let startmessage=""
+            const pressSStart  = document.querySelector('.pressSStart')
+            pressSStart.textContent=startmessage
+            document.querySelector(".loading").style.display = "none";
+            document.querySelector(".votingPage").style.display = "block";
+            
 
+
+        }
     }
 }
 
