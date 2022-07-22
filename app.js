@@ -1,23 +1,22 @@
 
 let createButtons = document.querySelector(".createButton")
 let startButton = document.querySelector(".startButton")
-let valueOfSubject = document.querySelector("select").value
-console.log( valueOfSubject)
-function selectorPagesTeleporter(){
-   if (startButton.onclick==true && valueOfSubject == "builder"){
+let subjectDropdown = document.querySelector("select")
+// console.log( valueOfSubject)
 
-    document.querySelector(".madLibInput").style.display = "block";
-    document.querySelector(".startScreen").style.display = "none";
-    
-   
-}else if (startButton.onclick==true && valueOfSubject == "voting") {
-  
+startButton.onclick= function () {
+    console.log("hgf")
+    if ( subjectDropdown.value == "builder"){
+        console.log("hello")
+        document.querySelector(".madLibInput").style.display = "block";
+        document.querySelector(".startScreen").style.display = "none";
+    // }else if  valueOfSubject == "voting") {
+
+
+    }
 }
 
-
-
-}
-
+// selectorPagesTeleporter()
 
 createButtons.onclick = function(){
     document.querySelector(".madLibInput").style.display = "none";
