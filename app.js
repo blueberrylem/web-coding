@@ -7,10 +7,13 @@ let subjectDropdown = document.querySelector("select")
 startButton.onclick= function () {
     console.log("hgf")
     if ( subjectDropdown.value == "builder"){
-        console.log("hello")
+        console.log("builder")
         document.querySelector(".madLibInput").style.display = "block";
         document.querySelector(".startScreen").style.display = "none";
-    // }else if  valueOfSubject == "voting") {
+    }else if ( subjectDropdown.value == "voting"){
+        console.log("voter")
+        document.querySelector(".loading").style.display = "block";
+        
 
 
     }

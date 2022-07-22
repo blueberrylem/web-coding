@@ -2,11 +2,36 @@
 
 body {
     background-size:contain ;
-    background-image:url('download.jfif');
     
-    color: rgb(255, 0, 0);
+    background-color: black;
+    
+    color: rgb(55, 255, 0);
 
+    /* background-image:url('ar.jpg'); */
+ 
 }
+
+.loading{
+    /* position-x: center;
+    position-y: center; */
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: none;
+    size: cover;
+}  
+
+.startScreen{
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    text-align: center;
+   
+}
+    
 .madLibInput{
     display: none;
 }
