@@ -8,7 +8,7 @@ let subjectDropdown = document.querySelector("select")
 // console.log( valueOfSubject)
 
 startButton.onclick= function () {
-    
+    playAudio()
     console.log("hgf")
     if ( subjectDropdown.value == "builder"){
         console.log("builder")
@@ -22,6 +22,7 @@ startButton.onclick= function () {
         const pressSStart  = document.querySelector('.pressSStart')
         pressSStart.textContent=startmessage
         document.onkeydown=function () {
+            playAudio()
             console.log("dkfjadkfjdlakfjadslfkja;sdlkfj;dlaskjfldkjas;f");
             let startmessage=""
             const pressSStart  = document.querySelector('.pressSStart')
