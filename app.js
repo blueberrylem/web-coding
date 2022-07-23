@@ -6,8 +6,9 @@ let subjectDropdown = document.querySelector("select")
 // const nouns = ["Actor, Airport, Animal, Apple, Army, Balloon, banana, gold, grass, greece, guitar, hair, hamburger, helicopter, helmet, holiday, honey, horse, hospital, painting, parrot, pencil, piano, pillow, pizza, planet, plastic, Portugal, potato, queen, quill, rain, refrigerator, river, iron, insurance, insect, ice, beard, bed, belgium, boy, branch, beach, battery, island, ice, hydrogen, house, hospital, camera, candle, car, caravan, carpet, cartoon, china, church, crayon, crowd, daughter, death, Denmark, library, lighter, leather, lawyer, lamp, knife, kite, kitchen, king, kangaroo, juice, jewellery 
 // "]
 // console.log( valueOfSubject)
-
+playAudio1()
 startButton.onclick= function () {
+    playAudio()
     console.log("hgf")
     if ( subjectDropdown.value == "builder"){
         console.log("builder")
@@ -37,6 +38,7 @@ startButton.onclick= function () {
 // selectorPagesTeleporter()
 
 createButtons.onclick = function(){
+    playAudio()
     document.querySelector(".madLibInput").style.display = "none";
  
     let ab1 = document.querySelector(".a1").value
@@ -68,6 +70,7 @@ createButtons.onclick = function(){
     document.querySelector(".submitButton").style.display = "block";
 }
 submitButton.onclick = function (){
+    playAudio()
     console.log("helloWorld") 
 document.querySelector(".submitButton").style.display = "none";
 document.querySelector(".madLibsPrintout").style.display = "none";
