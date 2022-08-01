@@ -4,8 +4,23 @@ let ssubmitButton = document.querySelector(".ssubmitButton")
 let startButton = document.querySelector(".startButton")
 let nextButton = document.querySelector(".nextButton")
 let subjectDropdown = document.getElementById("subject")
-let subjectDropdown2 = document.getElementById("subjects");
-
+let subjectDropdown2 = document.getElementById("subjects")
+// let noun = document.getElementById("subjects")
+// let noun1 = document.querySelector(".noun1").value
+// let noun2 = document.querySelector(".noun2").value
+// let verb1 = document.querySelector(".verb1").value
+// let verb2 = document.querySelector(".verb2").value
+// let adverb1 = document.querySelector(".adverb1").value
+// let partsOfSpeech = [noun1, verb1, adverb1, noun2, verb2]
+// Math.floor(Math.random() * partsOfSpeech.length)
+// let partsOfSpeechIndex = Math.floor(Math.random() * partsOfSpeech.length)
+// let counter=1
+// hello=partsOfSpeech[partsOfSpeechIndex]
+// while (counter<6) {
+//     partsOfSpeech[partsOfSpeechIndex]
+//     counter+1
+//     console.log(hello)
+// }
 // const nouns = ["Actor, Airport, Animal, Apple, Army, Balloon, banana, gold, grass, greece, guitar, hair, hamburger, helicopter, helmet, holiday, honey, horse, hospital, painting, parrot, pencil, piano, pillow, pizza, planet, plastic, Portugal, potato, queen, quill, rain, refrigerator, river, iron, insurance, insect, ice, beard, bed, belgium, boy, branch, beach, battery, island, ice, hydrogen, house, hospital, camera, candle, car, caravan, carpet, cartoon, china, church, crayon, crowd, daughter, death, Denmark, library, lighter, leather, lawyer, lamp, knife, kite, kitchen, king, kangaroo, juice, jewellery 
 // "]
 // console.log( valueOfSubject)
