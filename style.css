@@ -83,11 +83,27 @@ body {
     padding: 70px 0;
     font-size: xx-large;
 }
-.ssubmitButton{
+.submittButton{
     color: cyan;
-    display: none;
+    display: block;
 }
 .madLibPrintout{
+    display:none
+}
+.p1vote{
+    display:none
+
+}
+.p2vote{
+    display:none
+}
+.p3vote{
+    display:none
+}
+.p4vote{
+    display:none
+}
+.p5vote{
     display:none
 }
 /* .trolling{

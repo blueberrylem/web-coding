@@ -23,6 +23,7 @@ startButton.onclick= function () {
         if ( subjectDropdown2.value == "1"){
             console.log("you did it")
             document.querySelector(".nounInput").style.display = "block";
+            
             document.querySelector(".startScreen").style.display = "none";
         }
         if ( subjectDropdown2.value == "2"){
@@ -60,6 +61,11 @@ startButton.onclick= function () {
             pressSStart.textContent=startmessage
             document.querySelector(".loading").style.display = "none";
             document.querySelector(".votingPage").style.display = "block";
+            document.querySelector(".p1vote").style.display = "block";
+            document.querySelector(".p2vote").style.display = "block";
+            document.querySelector(".p3vote").style.display = "block";
+            document.querySelector(".p4vote").style.display = "block";
+            document.querySelector(".p5vote").style.display = "block";
             
 
 
