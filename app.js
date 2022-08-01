@@ -4,6 +4,8 @@ let ssubmitButton = document.querySelector(".ssubmitButton")
 let startButton = document.querySelector(".startButton")
 let nextButton = document.querySelector(".nextButton")
 let subjectDropdown = document.querySelector("select")
+let subjectDropdown2 = document.querySelector("select")
+
 // const nouns = ["Actor, Airport, Animal, Apple, Army, Balloon, banana, gold, grass, greece, guitar, hair, hamburger, helicopter, helmet, holiday, honey, horse, hospital, painting, parrot, pencil, piano, pillow, pizza, planet, plastic, Portugal, potato, queen, quill, rain, refrigerator, river, iron, insurance, insect, ice, beard, bed, belgium, boy, branch, beach, battery, island, ice, hydrogen, house, hospital, camera, candle, car, caravan, carpet, cartoon, china, church, crayon, crowd, daughter, death, Denmark, library, lighter, leather, lawyer, lamp, knife, kite, kitchen, king, kangaroo, juice, jewellery 
 // "]
 // console.log( valueOfSubject)
@@ -18,8 +20,9 @@ startButton.onclick= function () {
     console.log("hgf")
     if ( subjectDropdown.value == "builder"){
         console.log("builder")
-        if ( subjectDropdown.value == "1"){
-        document.querySelector(".madLibInput").style.display = "block";
+        if ( subjectDropdown2.value == "1"){
+            console.log("you did it")
+        document.querySelector(".nounInput").style.display = "block";
         document.querySelector(".startScreen").style.display = "none";}
     }else if ( subjectDropdown.value == "voting"){
         console.log("voter")
