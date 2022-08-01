@@ -35,7 +35,7 @@ body {
     font-size: xx-large;
     font-size: 50px;
 }
-.playerSelector{
+.player{
     display: block;
     margin: auto;
     width: 60%;
@@ -70,7 +70,7 @@ body {
     padding: 70px 0;
     font-size: xx-large;
 }
-.submitButton{
+.ssubmitButton{
     color: cyan;
     display: none;
 }
