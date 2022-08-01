@@ -25,6 +25,26 @@ startButton.onclick= function () {
             document.querySelector(".nounInput").style.display = "block";
             document.querySelector(".startScreen").style.display = "none";
         }
+        if ( subjectDropdown2.value == "2"){
+            console.log("you did it")
+            document.querySelector(".nounInput2").style.display = "block";
+            document.querySelector(".startScreen").style.display = "none";
+        }
+        if ( subjectDropdown2.value == "3"){
+            console.log("you did it")
+            document.querySelector(".nounInput3").style.display = "block";
+            document.querySelector(".startScreen").style.display = "none";
+        }
+        if ( subjectDropdown2.value == "4"){
+            console.log("you did it")
+            document.querySelector(".nounInput4").style.display = "block";
+            document.querySelector(".startScreen").style.display = "none";
+        }
+        if ( subjectDropdown2.value == "5"){
+            console.log("you did it")
+            document.querySelector(".nounInput5").style.display = "block";
+            document.querySelector(".startScreen").style.display = "none";
+        }
     }else if ( subjectDropdown.value == "voting"){
         console.log("voter")
         document.querySelector(".startScreen").style.display = "none";
