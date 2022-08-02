@@ -5,13 +5,24 @@ let verb2 = document.querySelector(".verb2").value
 let adverb1 = document.querySelector(".adverb1").value
 
 let createButtons = document.querySelector(".createButton")
-let ssubmitButton = document.querySelector(".ssubmitButton")
 let startButton = document.querySelector(".startButton")
 let nextButton = document.querySelector(".nextButton")
 let subjectDropdown = document.getElementById("subject")
 let subjectDropdown2 = document.getElementById("subjects")
-let P1Button = document.getElementById(".P1Button")
-const buttons=[createButtons, ssubmitButton, startButton, nextButton, P1Button]
+let P1Button = document.querySelector(".P1Button")
+let n1SubmitButton=document.querySelector(".n1SubmitButton")
+let n2SubmitButton=document.querySelector(".n2SubmitButton")
+
+let n3SubmitButton=document.querySelector(".n3SubmitButton")
+
+let n4SubmitButton=document.querySelector(".n4SubmitButton")
+
+let n5SubmitButton=document.querySelector(".n5SubmitButton")
+
+
+
+const buttons=[createButtons, startButton, nextButton, P1Button]
+
 // let noun = document.getElementById("subjects")
 // let noun1 = document.querySelector(".noun1").value
 // let noun2 = document.querySelector(".noun2").value
@@ -91,17 +102,93 @@ startButton.onclick= function () {
             document.querySelector(".p5vote").style.display = "block";
             
 
-
+        }
     //     }
-    }
+    
 }
 
 // selectorPagesTeleporter()
-
-ssubmitButton.onclick = function(){
+}
+n1SubmitButton.onclick = function(){
+    let noun1 = document.querySelector(".noun1").value
+    // const collection=[noun1]
     playAudio()
-    document.querySelector(".madLibInput").style.display = "none";
+   
+    let message= "hello"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+""
+    console.log(message)
     
+
+n2SubmitButton.onclick = function(){
+    playAudio()
+    let verb1 = document.querySelector(".verb1").value
+    const madLibsPrintout = document.querySelector('.madLibsPrintout')
+    let message= "hello"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+""
+    console.log(message)
+    madLibsPrintout.textContent = message
+
+P1Button.onclick = function(){
+    document.querySelector(".giphyy").style.display = "block";
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+}
+  // ab1.remove();
+    // ab2.remove();
+    // ab3.remove();
+    // ab4.remove();
+    // ab5.remove();
+    // ab6.remove();
+    // ab7.remove();
+    // ab8.remove();
+    // ab9.remove();
+    // ab10.remove();
+    // ab11.remove();
+    // ab12.remove();
+    // ab13.remove();
+    // ab14.remove();
+    // ab15.remove();
+    // ab16.remove();
+    // ab17.remove();
+    // ab18.remove();
+    // ab19.remove();
+    // ab20.remove();
+ // document.querySelecto".madLibInput").style.display = "none";
+    // console.log(collection)
 
     // let ab1 = document.querySelector(".a1").value
     // let ab2 = document.querySelector(".a2").value
@@ -123,76 +210,5 @@ ssubmitButton.onclick = function(){
     // let ab18 = document.querySelector(".a18").value
     // let ab19 = document.querySelector(".a19").value
     // let ab20 = document.querySelector(".a20").value
+    
     // let message = "If you go to some_"+ab1+"_place like Yellowstone National_"+ab2+"_,you must know how to deal with the wild animals such as bears and wolves and_ "+ab3+". The most important of these is the bear. There are three kinds of bears, the grizzly bear, the_"+ab4+"_bear, and the_"+ab5+"_bear.Bears spend most of their time_"+ab6+"_or_"+ab7+". They look very_"+ab8+"_,but if you make them_"+ab9+",_they might bite your_"+ab10+". Bears will come up to your car and beg for_"+ab11+". They will stand on their hind legs and clap their_"+ab12+"_together and pretend to be_"+ab13+". But do not get out of your_"+ab14+"_or offer the bears_"+ab15+"_or_"+ab16+". This same advice applies to other wild creatures such as_"+ab17+"_and_"+ab18+". Remember all these rules and you will spend your vacation_"+ab19+"_and not get eaten by a_"+ab20
-    let message= noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."
-    console.log(message)
-
-    const madLibsPrintout = document.querySelector('.madLibsPrintout')
-    
-    
-    madLibsPrintout.textContent = message
-    document.querySelector(".submitButton").style.display = "block";
-
-}
-P1Button.onclick = function(){
-    document.querySelector(".giphyy").style.display = "block";
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // ab1.remove();
-    // ab2.remove();
-    // ab3.remove();
-    // ab4.remove();
-    // ab5.remove();
-    // ab6.remove();
-    // ab7.remove();
-    // ab8.remove();
-    // ab9.remove();
-    // ab10.remove();
-    // ab11.remove();
-    // ab12.remove();
-    // ab13.remove();
-    // ab14.remove();
-    // ab15.remove();
-    // ab16.remove();
-    // ab17.remove();
-    // ab18.remove();
-    // ab19.remove();
-    // ab20.remove();
-
-// hello
