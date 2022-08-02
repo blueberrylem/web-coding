@@ -117,6 +117,8 @@ holler.onLoad(()=>{
             parts.push(event1) 
             console.log(parts)
             const message=[event1]
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            madLibsPrintout.textContent = message
             // const message= ["sending"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
            
         })
