@@ -129,7 +129,7 @@ holler.onLoad(()=>{
             playAudio()
         
             holler.appInstance.notifyClients(noun1)
-            console.log("submitted"+noun1)
+            console.log("submitted"+" "+" "+noun1)
         }
         n2SubmitButton.onclick = function(){
             playAudio()
