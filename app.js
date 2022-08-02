@@ -135,8 +135,8 @@ holler.onLoad(()=>{
         P1Button.onclick = function(){
             document.querySelector(".giphyy").style.display = "block";
         }
-    }, 1000)
     })
+}, 1000)
 })
   // ab1.remove();
     // ab2.remove();
