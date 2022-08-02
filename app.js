@@ -127,7 +127,7 @@ holler.onLoad(()=>{
             holler.appInstance.notifyClients(noun1)
             console.log(noun1)
         }
-        n2SubmitButton.onclick = funtion();{
+        n2SubmitButton.onclick = funtion(){
             playAudio()
             let verb1 = document.querySelector(".verb1").value
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
