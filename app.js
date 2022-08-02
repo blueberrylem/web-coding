@@ -1,3 +1,8 @@
+let noun1 = document.querySelector(".noun1").value
+let noun2 = document.querySelector(".noun2").value
+let verb1 = document.querySelector(".verb1").value
+let verb2 = document.querySelector(".verb2").value
+let adverb1 = document.querySelector(".adverb1").value
 
 let createButtons = document.querySelector(".createButton")
 let ssubmitButton = document.querySelector(".ssubmitButton")
@@ -5,7 +10,8 @@ let startButton = document.querySelector(".startButton")
 let nextButton = document.querySelector(".nextButton")
 let subjectDropdown = document.getElementById("subject")
 let subjectDropdown2 = document.getElementById("subjects")
-let buttonf = document.getElementById(".buttonf")
+let P1Button = document.getElementById(".P1Button")
+const buttons=[createButtons, ssubmitButton, startButton, nextButton, P1Button]
 // let noun = document.getElementById("subjects")
 // let noun1 = document.querySelector(".noun1").value
 // let noun2 = document.querySelector(".noun2").value
@@ -95,11 +101,7 @@ startButton.onclick= function () {
 ssubmitButton.onclick = function(){
     playAudio()
     document.querySelector(".madLibInput").style.display = "none";
-    let noun1 = document.querySelector(".noun1").value
-    let noun2 = document.querySelector(".noun2").value
-    let verb1 = document.querySelector(".verb1").value
-    let verb2 = document.querySelector(".verb2").value
-    let adverb1 = document.querySelector(".adverb1").value
+    
 
     // let ab1 = document.querySelector(".a1").value
     // let ab2 = document.querySelector(".a2").value
@@ -132,10 +134,11 @@ ssubmitButton.onclick = function(){
     document.querySelector(".submitButton").style.display = "block";
 
 }
+P1Button.onclick = function(){
+    document.querySelector(".giphyy").style.display = "block";
 }
- buttonf.onclick= function (){
-    document.querySelector(".giphy").style.display = "block";
 }
+
 
 
 
