@@ -121,9 +121,11 @@ holler.onLoad(()=>{
             // const collection=[noun1]
             playAudio()
         
-            holler.appInstance.notifyClients("hi")
+            holler.appInstance.notifyClients(noun1)
+            console.log(noun1)
+            document.querySelector(".umm").style.display = "block";
         }
-        n2SubmitButton.onclick = function(){
+        n2SubmitButton.onclick = funtion();{
             playAudio()
             let verb1 = document.querySelector(".verb1").value
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
