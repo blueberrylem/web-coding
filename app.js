@@ -118,7 +118,7 @@ holler.onLoad(()=>{
             console.log(parts)
             const message=[event1]
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = message
+            madLibsPrintout.textContent = event1
             // const message= ["sending"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
            
         })
@@ -139,7 +139,7 @@ holler.onLoad(()=>{
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             const message= ["sending "+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             console.log(message)
-            madLibsPrintout.textContent = message
+            // madLibsPrintout.textContent = message
             holler.appInstance.notifyClients(verb1)
         }
         P1Button.onclick = function(){
