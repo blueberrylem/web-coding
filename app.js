@@ -5,6 +5,7 @@ let startButton = document.querySelector(".startButton")
 let nextButton = document.querySelector(".nextButton")
 let subjectDropdown = document.getElementById("subject")
 let subjectDropdown2 = document.getElementById("subjects")
+let buttonf = document.getElementById(".buttonf")
 // let noun = document.getElementById("subjects")
 // let noun1 = document.querySelector(".noun1").value
 // let noun2 = document.querySelector(".noun2").value
@@ -24,6 +25,7 @@ let subjectDropdown2 = document.getElementById("subjects")
 // const nouns = ["Actor, Airport, Animal, Apple, Army, Balloon, banana, gold, grass, greece, guitar, hair, hamburger, helicopter, helmet, holiday, honey, horse, hospital, painting, parrot, pencil, piano, pillow, pizza, planet, plastic, Portugal, potato, queen, quill, rain, refrigerator, river, iron, insurance, insect, ice, beard, bed, belgium, boy, branch, beach, battery, island, ice, hydrogen, house, hospital, camera, candle, car, caravan, carpet, cartoon, china, church, crayon, crowd, daughter, death, Denmark, library, lighter, leather, lawyer, lamp, knife, kite, kitchen, king, kangaroo, juice, jewellery 
 // "]
 // console.log( valueOfSubject)
+
 
 nextButton.onclick= function (){
     document.querySelector(".player").style.display = "block";
@@ -128,9 +130,12 @@ ssubmitButton.onclick = function(){
     
     madLibsPrintout.textContent = message
     document.querySelector(".submitButton").style.display = "block";
-}
-}
 
+}
+}
+ buttonf.onclick= function (){
+    document.querySelector(".giphy").style.display = "block";
+}
 
 
 
