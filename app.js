@@ -113,7 +113,7 @@ holler.onLoad(()=>{
         }
         holler.onClientEvent(event=>{
             console.log(`Client event received: ${event}`)
-            const parts=[0]
+            const parts=[ew]
             parts.push(event) 
             console.log(parts)
            
