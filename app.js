@@ -123,7 +123,6 @@ holler.onLoad(()=>{
         
             holler.appInstance.notifyClients(noun1)
             console.log(noun1)
-            document.querySelector(".umm").style.display = "block";
         }
         n2SubmitButton.onclick = funtion();{
             playAudio()
