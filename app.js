@@ -113,6 +113,9 @@ holler.onLoad(()=>{
         }
         holler.onClientEvent(event=>{
             console.log(`Client event received: ${event}`)
+            const parts=[0]
+            parts.push(event) 
+            console.log("parts")
         })
         // selectorPagesTeleporter()
         // }
