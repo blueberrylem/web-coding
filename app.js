@@ -135,7 +135,7 @@ holler.onLoad(()=>{
             playAudio()
             let verb1 = document.querySelector(".verb1").value
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            const message= ["sending"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+            const message= ["sending "+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             console.log(message)
             madLibsPrintout.textContent = message
             holler.appInstance.notifyClients(verb1)
