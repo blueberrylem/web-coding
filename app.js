@@ -116,7 +116,11 @@ holler.onLoad(()=>{
             const parts=[0]
             parts.push(event) 
             console.log(parts)
+           
+            const message= ["sending"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+            madLibsPrintout.textContent = message
         })
+
         // selectorPagesTeleporter()
         // }
         n1SubmitButton.onclick = function(){
