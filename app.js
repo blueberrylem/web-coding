@@ -8,7 +8,7 @@ holler.onLoad(()=>{
         let verb1 = document.querySelector(".verb1").value  
         let verb2 = document.querySelector(".verb2").value
         let adverb1 = document.querySelector(".adverb1").value
-
+        let clear1=document.querySelector(".cclear")
         let createButtons = document.querySelector(".createButton")
         let startButton = document.querySelector(".startButton")
         let nextButton = document.querySelector(".nextButton")
@@ -21,6 +21,7 @@ holler.onLoad(()=>{
         let n4SubmitButton=document.querySelector(".n4SubmitButton")
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
         n1SubmitButton.onclick = function(){
+            document.querySelector(".cclear").style.display = "block";
             noun1.value = '';
             let event1 = document.querySelector(".noun1").value
             // const collection=[noun1]
@@ -30,6 +31,7 @@ holler.onLoad(()=>{
             console.log("submitted"+" "+" "+event1)
         }
         n2SubmitButton.onclick = function(){
+            document.querySelector(".cclear").style.display = "block";
             verb1.value = '';
             playAudio()
             let event2 = document.querySelector(".verb1").value
@@ -39,6 +41,8 @@ holler.onLoad(()=>{
             holler.appInstance.notifyClients(event2)
         }
         n3SubmitButton.onclick = function(){
+            document.querySelector(".cclear").style.display = "block";
+
             adverb1.value = '';
             let event3 = document.querySelector(".adverb1").value
             // const collection=[noun1]
@@ -48,6 +52,7 @@ holler.onLoad(()=>{
             console.log("submitted"+" "+" "+event3)
         }
         n4SubmitButton.onclick = function(){
+            document.querySelector(".cclear").style.display = "block";
             noun1.value = '';
             let event4 = document.querySelector(".noun2").value
             // const collection=[noun1]
@@ -57,6 +62,7 @@ holler.onLoad(()=>{
             console.log("submitted"+" "+" "+event4)
         }
         n5SubmitButton.onclick = function(){
+            document.querySelector(".cclear").style.display = "block";
             verb2.value = '';
             let event5 = document.querySelector(".verb2").value
             // const collection=[noun1]
@@ -66,10 +72,10 @@ holler.onLoad(()=>{
             console.log("submitted"+" "+" "+event5)
         }
 
-
+      
 
         const buttons=[createButtons, startButton, nextButton, P1Button]
-
+        let parts=[]
     // let noun = document.getElementById("subjects")
     // let noun1 = document.querySelector(".noun1").value
     // let noun2 = document.querySelector(".noun2").value
@@ -153,8 +159,9 @@ holler.onLoad(()=>{
             }
             
         }
-        const parts=[]
+        
         holler.onClientEvent(event1=>{
+            xa.play()
             console.log(`Client event received: ${event1}`)
             parts.push(event1+" "+"  ") 
             console.log(event1)
@@ -169,7 +176,11 @@ holler.onLoad(()=>{
         
        
        
-
+        clear1.onclick= function(){
+          
+           let parts=[]
+            console.log("hghghghghgg")
+        }
 
 
         // selectorPagesTeleporter()
