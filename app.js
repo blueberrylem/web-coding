@@ -111,12 +111,13 @@ holler.onLoad(()=>{
             }
             
         }
-        holler.onClientEvent(noun1=>{
+        holler.onClientEvent(event1=>{
             console.log(`Client event received: ${event1}`)
             const parts=[event1]
             parts.push(event1) 
             console.log(event1)
             const message=[event1]
+            console.log(parts)
             // const message= [+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             madLibsPrintout.textContent = event1
