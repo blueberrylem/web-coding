@@ -48,6 +48,7 @@ holler.onLoad(()=>{
             console.log("submitted"+" "+" "+event3)
         }
         n4SubmitButton.onclick = function(){
+            noun1.value = '';
             let event4 = document.querySelector(".noun2").value
             // const collection=[noun1]
             playAudio()
