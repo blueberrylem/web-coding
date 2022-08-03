@@ -118,31 +118,68 @@ holler.onLoad(()=>{
             console.log(event1)
             const message=[event1]
             console.log(parts)
-            // const message= [+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+            // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = event1
-           
+            madLibsPrintout.textContent = event1        
            
         })
 
         // selectorPagesTeleporter()
         // }
         n1SubmitButton.onclick = function(){
-            let noun1 = document.querySelector(".noun1").value
+            let event1 = document.querySelector(".noun1").value
             // const collection=[noun1]
             playAudio()
         
-            holler.appInstance.notifyClients(noun1)
-            console.log("submitted"+" "+" "+noun1)
+            holler.appInstance.notifyClients(event1)
+            console.log("submitted"+" "+" "+event1)
         }
         n2SubmitButton.onclick = function(){
             playAudio()
-            let verb1 = document.querySelector(".verb1").value
+            let event2 = document.querySelector(".verb1").value
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
            
             // madLibsPrintout.textContent = message
-            holler.appInstance.notifyClients(verb1)
+            holler.appInstance.notifyClients(event2)
         }
+        n3SubmitButton.onclick = function(){
+            let event3 = document.querySelector(".adverb1").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event3)
+            console.log("submitted"+" "+" "+event3)
+        }
+        n4SubmitButton.onclick = function(){
+            let event4 = document.querySelector(".noun2").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event4)
+            console.log("submitted"+" "+" "+event4)
+        }
+        n5SubmitButton.onclick = function(){
+            let event5 = document.querySelector(".verb2").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event5)
+            console.log("submitted"+" "+" "+event5)
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         P1Button.onclick = function(){
             document.querySelector(".giphyy").style.display = "block";
         }
