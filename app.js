@@ -111,15 +111,16 @@ holler.onLoad(()=>{
             }
             
         }
-        holler.onClientEvent(event1=>{
-            console.log(`Client event received: ${event1}`)
-            const parts=[event1]
-            parts.push(event1) 
-            console.log(parts)
-            const message=[event1]
+        holler.onClientEvent(noun1=>{
+            console.log(`Client event received: ${noun1}`)
+            const parts=[noun1]
+            parts.push(noun1) 
+            console.log(noun1)
+            // const message=[noun1]
+            const message= [+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             madLibsPrintout.textContent = event1
-            // const message= ["sending"+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+           
            
         })
 
