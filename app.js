@@ -113,7 +113,7 @@ holler.onLoad(()=>{
         }
         holler.onClientEvent(event1=>{
             console.log(`Client event received: ${event1}`)
-            const parts=[event1]
+            const parts=[]
             parts.push(event1) 
             console.log(event1)
             const message=[event1]
