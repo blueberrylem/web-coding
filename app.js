@@ -123,6 +123,54 @@ holler.onLoad(()=>{
             madLibsPrintout.textContent = event1        
            
         })
+        holler.onClientEvent(event2=>{
+            console.log(`Client event received: ${event2}`)
+            const parts=[]
+            parts.push(event2) 
+            console.log(event2)
+            //const message=[event2]
+            console.log(parts)
+            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            madLibsPrintout.textContent = message        
+           
+        })
+        holler.onClientEvent(event3=>{
+            console.log(`Client event received: ${event3}`)
+            const parts=[]
+            parts.push(event3) 
+            console.log(event3)
+            //const message=[event3]
+            console.log(parts)
+            const message=[+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            madLibsPrintout.textContent = message        
+           
+        })
+        holler.onClientEvent(event4=>{
+            console.log(`Client event received: ${event4}`)
+            const parts=[]
+            parts.push(event4) 
+            console.log(event4)
+            //const message=[event4]
+            console.log(parts)
+            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            madLibsPrintout.textContent = message        
+           
+        })
+        holler.onClientEvent(event5=>{
+            console.log(`Client event received: ${event5}`)
+            const parts=[]
+            parts.push(event5) 
+            console.log(event5)
+           // const message=[event1]
+            console.log(parts)
+            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            madLibsPrintout.textContent = message     
+           
+        })
 
         // selectorPagesTeleporter()
         // }
