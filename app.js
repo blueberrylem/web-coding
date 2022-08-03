@@ -17,12 +17,53 @@ holler.onLoad(()=>{
         let P1Button = document.querySelector(".P1Button")
         let n1SubmitButton=document.querySelector(".n1SubmitButton")
         let n2SubmitButton=document.querySelector(".n2SubmitButton")
-
         let n3SubmitButton=document.querySelector(".n3SubmitButton")
-
         let n4SubmitButton=document.querySelector(".n4SubmitButton")
-
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
+        n1SubmitButton.onclick = function(){
+            noun1.value = '';
+            let event1 = document.querySelector(".noun1").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event1)
+            console.log("submitted"+" "+" "+event1)
+        }
+        n2SubmitButton.onclick = function(){
+            verb1.value = '';
+            playAudio()
+            let event2 = document.querySelector(".verb1").value
+            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+           
+            // madLibsPrintout.textContent = message
+            holler.appInstance.notifyClients(event2)
+        }
+        n3SubmitButton.onclick = function(){
+            adverb1.value = '';
+            let event3 = document.querySelector(".adverb1").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event3)
+            console.log("submitted"+" "+" "+event3)
+        }
+        n4SubmitButton.onclick = function(){
+            let event4 = document.querySelector(".noun2").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event4)
+            console.log("submitted"+" "+" "+event4)
+        }
+        n5SubmitButton.onclick = function(){
+            verb2.value = '';
+            let event5 = document.querySelector(".verb2").value
+            // const collection=[noun1]
+            playAudio()
+        
+            holler.appInstance.notifyClients(event5)
+            console.log("submitted"+" "+" "+event5)
+        }
 
 
 
@@ -111,110 +152,28 @@ holler.onLoad(()=>{
             }
             
         }
+        const parts=[]
         holler.onClientEvent(event1=>{
             console.log(`Client event received: ${event1}`)
-            const parts=[]
-            parts.push(event1) 
+            parts.push(event1+" "+"  ") 
             console.log(event1)
-            const message=[event1]
+            // const message=[event1]
             console.log(parts)
             // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+            const withoutCommas = parts.join(' ');
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = event1        
+            madLibsPrintout.textContent = withoutCommas    
            
         })
-        holler.onClientEvent(event2=>{
-            console.log(`Client event received: ${event2}`)
-            const parts=[]
-            parts.push(event2) 
-            console.log(event2)
-            //const message=[event2]
-            console.log(parts)
-            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = message        
-           
-        })
-        holler.onClientEvent(event3=>{
-            console.log(`Client event received: ${event3}`)
-            const parts=[]
-            parts.push(event3) 
-            console.log(event3)
-            //const message=[event3]
-            console.log(parts)
-            const message=[+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = message        
-           
-        })
-        holler.onClientEvent(event4=>{
-            console.log(`Client event received: ${event4}`)
-            const parts=[]
-            parts.push(event4) 
-            console.log(event4)
-            //const message=[event4]
-            console.log(parts)
-            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = message        
-           
-        })
-        holler.onClientEvent(event5=>{
-            console.log(`Client event received: ${event5}`)
-            const parts=[]
-            parts.push(event5) 
-            console.log(event5)
-           // const message=[event1]
-            console.log(parts)
-            const message= [+event1+" "+ " "+event2+" "+ " "+event3+" "+ " "+event4+" "+ " "+event5+"."]
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = message     
-           
-        })
+        
+       
+       
+
+
 
         // selectorPagesTeleporter()
         // }
-        n1SubmitButton.onclick = function(){
-            let event1 = document.querySelector(".noun1").value
-            // const collection=[noun1]
-            playAudio()
         
-            holler.appInstance.notifyClients(event1)
-            console.log("submitted"+" "+" "+event1)
-        }
-        n2SubmitButton.onclick = function(){
-            playAudio()
-            let event2 = document.querySelector(".verb1").value
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
-           
-            // madLibsPrintout.textContent = message
-            holler.appInstance.notifyClients(event2)
-        }
-        n3SubmitButton.onclick = function(){
-            let event3 = document.querySelector(".adverb1").value
-            // const collection=[noun1]
-            playAudio()
-        
-            holler.appInstance.notifyClients(event3)
-            console.log("submitted"+" "+" "+event3)
-        }
-        n4SubmitButton.onclick = function(){
-            let event4 = document.querySelector(".noun2").value
-            // const collection=[noun1]
-            playAudio()
-        
-            holler.appInstance.notifyClients(event4)
-            console.log("submitted"+" "+" "+event4)
-        }
-        n5SubmitButton.onclick = function(){
-            let event5 = document.querySelector(".verb2").value
-            // const collection=[noun1]
-            playAudio()
-        
-            holler.appInstance.notifyClients(event5)
-            console.log("submitted"+" "+" "+event5)
-        }
-
 
 
 
