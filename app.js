@@ -116,8 +116,8 @@ holler.onLoad(()=>{
             const parts=[noun1]
             parts.push(noun1) 
             console.log(noun1)
-            // const message=[noun1]
-            const message= [+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+            const message=[noun1]
+            // const message= [+noun1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             madLibsPrintout.textContent = event1
            
