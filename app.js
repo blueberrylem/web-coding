@@ -20,6 +20,7 @@ holler.onLoad(()=>{
         let n3SubmitButton=document.querySelector(".n3SubmitButton")
         let n4SubmitButton=document.querySelector(".n4SubmitButton")
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
+        let madLibsPrintout=document.querySelector(".madLibsPrintout")
         n1SubmitButton.onclick = function(){
             document.querySelector(".cclear").style.display = "block";
             noun1.value = '';
@@ -171,16 +172,17 @@ holler.onLoad(()=>{
             const withoutCommas = parts.join(' ');
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             madLibsPrintout.textContent = withoutCommas    
-           
+          clear1.onclick= function(){
+          
+            madLibsPrintout.textContent=""
+            parts=[]
+            console.log("hghghghghgg")
+        } 
         })
         
        
        
-        clear1.onclick= function(){
-          
-           let parts=[]
-            console.log("hghghghghgg")
-        }
+        
 
 
         // selectorPagesTeleporter()
