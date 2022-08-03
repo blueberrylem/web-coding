@@ -137,7 +137,7 @@ holler.onLoad(()=>{
             playAudio()
             let verb1 = document.querySelector(".verb1").value
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-           s
+           
             // madLibsPrintout.textContent = message
             holler.appInstance.notifyClients(verb1)
         }
