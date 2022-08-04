@@ -2,7 +2,7 @@ holler.onLoad(()=>{
     setTimeout(()=> {
     holler.me(()=>{
 
-
+        let saving=[]
         let noun1 = document.querySelector(".noun1").value
         let noun2 = document.querySelector(".noun2").value
         let verb1 = document.querySelector(".verb1").value  
@@ -19,6 +19,7 @@ holler.onLoad(()=>{
         let P3Button=document.querySelector(".P3Button")
         let P4Button=document.querySelector(".P4Button")
         let P5Button=document.querySelector(".P5Button")
+        let showButton=document.querySelector(".showButton")
         let n1SubmitButton=document.querySelector(".n1SubmitButton")
         let n2SubmitButton=document.querySelector(".n2SubmitButton")
         let n3SubmitButton=document.querySelector(".n3SubmitButton")
@@ -42,10 +43,16 @@ holler.onLoad(()=>{
         //     console.log("fdfdfdfdfjadsf kjasfkweipfuwesdhfcukwehsfiuekcjsdhx kwhef iqhweifo uhwe")
         // }
         n1SubmitButton.onclick = function(){
+            parts=[]
             document.querySelector(".cclear").style.display = "block";
         let story1=["The monster lifted me off the"+noun1]
         let story2=["It was dark and" +verb1] 
         let story3=["I screamed so loudly, I woke up every "+adverb1]
+        let story4=["It's time to treat your tired"]
+        let story5=["Last Christmas he broke the"]
+        let story6=["Love must be in the"]
+        let story7=["Remember to start your speech with a funny"]
+        let story8=["I hope he doesn't recognize my"]
         var stories=[story1,story2,story3]
         var randStory = stories[Math.floor(Math.random() * stories.length)];
         console.log(randStory);
@@ -54,20 +61,29 @@ holler.onLoad(()=>{
             let event1a=(story1+" "+" "+inputt)
             let event1ab=(story2+" "+" "+inputt)
             let event1abc=(story3+" "+" "+inputt)
-            var randdom=[event1a,event1ab,event1abc]
+            let event1abcd=(story4+" "+" "+inputt)
+            let event2q=(story5+" "+" "+inputt)
+            let event2w=(story7+" "+" "+inputt)
+            let event2e=(story8+" "+" "+inputt)
+            let event6f=(story6+" "+" "+inputt)
+            var randdom=[event1a,event1abc,event1abcd,event2q,event2w,event2e,event6f]
             console.log(randdom)
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
             event1=randh
-            
-            // const collection=[noun1]
-            playAudio()
+              holler.appInstance.notifyClients(event1)
+            playAudio() // const collection=[noun1]
+            document.querySelector(".showButton").style.display = "block"
+            showButton.onclick = function(){
+
+                madLibsPrintout.textContent = saving
+            }
             // let story2Real=[]
             // if (randStory=story2){
             //     event1=[story2, noun1, story2a]
             // }
-            holler.appInstance.notifyClients(event1)
-            console.log("submitted"+" "+" "+story2Real)
+          
+            // console.log("submitted"+" "+" "+story2Real)
         // n2SubmitButton.onclick = function(){
         //     document.querySelector(".cclear").style.display = "block";
         //     verb1.value = '';
@@ -197,11 +213,12 @@ holler.onLoad(()=>{
             }
             
         }
-        
+       
         holler.onClientEvent(event1=>{
             xa.play()
             console.log(`Client event received: ${event1}`)
             parts.push(event1+" "+"  ") 
+            saving.push(event1+" "+"  ") 
             console.log(event1)
             // const message=[event1]
             console.log(parts)
