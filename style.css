@@ -8,7 +8,7 @@ body {
     color: rgb(255, 255, 0);
     size: 20px;
     font-size: larger;
-
+    animation: color-change 6s infinite;
 }
 
 .loading{
@@ -33,7 +33,53 @@ body {
     padding: 70px 0;
     font-size: xx-large;
     font-size: 50px;
+    animation: color-change 6s infinite;
 }
+@keyframes color-change {
+    0% {
+        color: blue;
+      }
+      10% {
+        color: #8e44ad;
+      }
+      20% {
+        color: #1abc9c;
+      }
+      30% {
+        color: #d35400;
+      }
+      40% {
+        color: blue;
+      }
+      50% {
+        color: #34495e;
+      }
+      60% {
+        color: blue;
+      }
+      70% {
+        color: #2980b9;
+      }
+      80% {
+        color: #f1c40f;
+      }
+      90% {
+        color: #2980b9;
+      }
+      100% {
+        color: pink;
+      }
+    
+    /* 0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+    0% {color:red;}
+    50% {color:rgb(0, 255, 76)}
+    100%{color:aquamarine}
+    0%{color:aquamarine}
+    50%{color:aqua}
+    100%{color:gold} */
+  }
 .player{
     display: block;
     margin: auto;
