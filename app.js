@@ -53,6 +53,19 @@ holler.onLoad(()=>{
         let story6=["Love must be in the"]
         let story7=["Remember to start your speech with a funny"]
         let story8=["I hope he doesn't recognize my"]
+        let story9=["Their shadow loomed over their"]
+        let story10=["Remember, prosperity is just around the"]
+        let story11=["She realized she lost her"]
+        let story12=["Next you bake it in a very hot"]
+        let story13=["Now he's dragging you to a bottomless"]
+        let story14=["Every morning after class we beg for"]
+        let story15=[" If you won’t take our word for it, there’s scientific proof of the old adage that laughter is the best "]
+        let story16=["Life is a soup and I am a"]
+        let story17=["Life is short smile while you still have"]
+        let story18=["Why would you eat a "]
+        let story19=["He never typed on a"]
+        let story20=["He surfed on the"]
+        
         var stories=[story1,story2,story3]
         var randStory = stories[Math.floor(Math.random() * stories.length)];
         console.log(randStory);
@@ -66,7 +79,19 @@ holler.onLoad(()=>{
             let event2w=(story7+" "+" "+inputt)
             let event2e=(story8+" "+" "+inputt)
             let event6f=(story6+" "+" "+inputt)
-            var randdom=[event1a,event1abc,event1abcd,event2q,event2w,event2e,event6f]
+            let event2t=(story9+" "+" "+inputt)
+            let event2tt=(story10+" "+" "+inputt)
+            let event2ttt=(story11+" "+" "+inputt)
+            let event2tttt=(story12+" "+" "+inputt)
+            let eventat=(story13+" "+" "+inputt)
+            let eventatt=(story14+" "+" "+inputt)
+            let eventaatt=(story15+" "+" "+inputt)
+            let eventz=(story16+" "+" "+inputt)
+            let eventx=(story17+" "+" "+inputt)
+            let eventc=(story18+" "+" "+inputt)
+            let eventv=(story19+" "+" "+inputt)
+            let eventb=(story20+" "+" "+inputt)
+            var randdom=[event1a,event1abc,event1abcd,event2q,event2w,event2e,event6f,event2t, event2ttt, event2tt, event2tttt, eventat, eventaatt, eventatt, eventz, eventc, eventb,eventv, eventx]
             console.log(randdom)
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
@@ -79,7 +104,7 @@ holler.onLoad(()=>{
             document.querySelector(".nounInput").style.display = "none";
             document.querySelector(".nounInput").style.display = "none";
                 
-            madLibsPrintout.textContent = saving+"The Player with the most votes wins"
+            madLibsPrintout.textContent = parts+"The Player with the most votes wins"
             
 
             document.querySelector(".loading").style.display = "block";
@@ -246,14 +271,22 @@ holler.onLoad(()=>{
             xa.play()
             console.log(`Client event received: ${event1}`)
             parts.push(event1+" "+"  ") 
-            saving.push(event1+" "+"  ") 
+
+            saving.push(event1+" "+"  ")
+            
             console.log(event1)
             // const message=[event1]
             console.log(parts)
             // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const withoutCommas = parts.join(' ');
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-            madLibsPrintout.textContent = withoutCommas    
+
+            const para = document.createElement("div");
+            para.innerText = withoutCommas;
+            madLibsPrintout.appendChild(para);
+            
+            // madLibsPrintout.textContent = withoutCommas    
+
           clear1.onclick= function(){
             
             madLibsPrintout.textContent=""
@@ -332,4 +365,10 @@ holler.onLoad(()=>{
     // let ab19 = document.querySelector(".a19").value
     // let ab20 = document.querySelector(".a20").value}
     
+
+
+
+
+
+
     // let message = "If you go to some_"+ab1+"_place like Yellowstone National_"+ab2+"_,you must know how to deal with the wild animals such as bears and wolves and_ "+ab3+". The most important of these is the bear. There are three kinds of bears, the grizzly bear, the_"+ab4+"_bear, and the_"+ab5+"_bear.Bears spend most of their time_"+ab6+"_or_"+ab7+". They look very_"+ab8+"_,but if you make them_"+ab9+",_they might bite your_"+ab10+". Bears will come up to your car and beg for_"+ab11+". They will stand on their hind legs and clap their_"+ab12+"_together and pretend to be_"+ab13+". But do not get out of your_"+ab14+"_or offer the bears_"+ab15+"_or_"+ab16+". This same advice applies to other wild creatures such as_"+ab17+"_and_"+ab18+". Remember all these rules and you will spend your vacation_"+ab19+"_and not get eaten by a_"+ab20

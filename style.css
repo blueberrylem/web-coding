@@ -133,8 +133,10 @@ body {
     display: block;
 }
 .madLibPrintout{
+   
     color: rgb(4, 0, 255);
     display:none
+    text-shadow 0 0 2px red;
 }
 .p1vote{
     display:none;
