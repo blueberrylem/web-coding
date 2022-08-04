@@ -14,12 +14,12 @@ holler.onLoad(()=>{
         let nextButton = document.querySelector(".nextButton")
         let subjectDropdown = document.getElementById("subject")
         let subjectDropdown2 = document.getElementById("subjects")
-        let P1Button = document.querySelector(".P1Button")
+        let P1Button=document.querySelector(".P1Button")
         let P2Button=document.querySelector(".P2Button")
         let P3Button=document.querySelector(".P3Button")
         let P4Button=document.querySelector(".P4Button")
         let P5Button=document.querySelector(".P5Button")
-        let showButton=document.querySelector(".showButton")
+        let show=document.querySelector(".show")
         let n1SubmitButton=document.querySelector(".n1SubmitButton")
         let n2SubmitButton=document.querySelector(".n2SubmitButton")
         let n3SubmitButton=document.querySelector(".n3SubmitButton")
@@ -27,13 +27,13 @@ holler.onLoad(()=>{
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
         let madLibsPrintout=document.querySelector(".madLibsPrintout")
         let done=document.querySelector(".done")
-        let story1=["I wanted to get home as fast as my  "+noun1+" "+"could carry me."]
-        let story2=["It was a dark and"] 
-        let story2a=[verb1+"night"]
-        let story3=["I screamed so loudly, I woke up every "+adverb1+" in the forest."]
-        var stories=[story1,story2,story3]
-        var randStory = stories[Math.floor(Math.random() * stories.length)];
-        console.log(randStory);
+        // let story1=["I wanted to get home as fast as my  "+noun1+" "+"could carry me."]
+        // let story2=["It was a dark and"] 
+        // let story2a=[verb1+"night"]
+        // let story3=["I screamed so loudly, I woke up every "+adverb1+" in the forest."]
+        // var stories=[story1,story2,story3]
+        // var randStory = stories[Math.floor(Math.random() * stories.length)];
+        // console.log(randStory);
         
         
         // const PButtons=[P1Button,P2Button,P3Button,P4Button,P5Button]
@@ -70,14 +70,42 @@ holler.onLoad(()=>{
             console.log(randdom)
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
-            event1=(name+"says: "+" "+randh)
+            event1=(name +" "+ "says: "+" "+randh)
               holler.appInstance.notifyClients(event1)
             playAudio() // const collection=[noun1]
-            document.querySelector(".showButton").style.display = "block"
-            // showButton.onclick = function(){
+            document.querySelector(".show").style.display = "block"}
+        show.onclick = function(){
+            console.log("fdffdfdfmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+            document.querySelector(".nounInput").style.display = "none";
+            document.querySelector(".nounInput").style.display = "none";
+                
+            madLibsPrintout.textContent = saving+"The Player with the most votes wins"
+            
 
-            //     madLibsPrintout.textContent = saving
-            // }
+            document.querySelector(".loading").style.display = "block";
+            document.querySelector(".loading").style.display = "none";
+            document.querySelector(".p1vote").style.display = "block";
+            document.querySelector(".p2vote").style.display = "block";
+            document.querySelector(".p3vote").style.display = "block";
+            document.querySelector(".p4vote").style.display = "block";
+            document.querySelector(".p5vote").style.display = "block";
+        }
+        P1Button.onclick = function(){
+            event1=("Player One Wins!")
+            holler.appInstance.notifyClients(event1)}
+        P2Button.onclick = function(){
+            event1=("Player Two Wins!")
+            holler.appInstance.notifyClients(event1)}
+        P3Button.onclick = function(){
+            event1=("Player Three Wins!")
+            holler.appInstance.notifyClients(event1)}
+        P4Button.onclick = function(){
+            event1=("Player Four Wins!")
+            holler.appInstance.notifyClients(event1)}
+        P5Button.onclick = function(){
+            event1=("Player Five Wins!")
+            holler.appInstance.notifyClients(event1)}
+                        // }
             // let story2Real=[]
             // if (randStory=story2){
             //     event1=[story2, noun1, story2a]
@@ -126,9 +154,9 @@ holler.onLoad(()=>{
         //     console.log("submitted"+" "+" "+event5)
         // }
 
-        }
+        
 
-        const buttons=[createButtons, startButton, nextButton, P1Button]
+        // const buttons=[createButtons, startButton, nextButton, P1Button]
         let parts=[]
     // let noun = document.getElementById("subjects")
     // let noun1 = document.querySelector(".noun1").value
@@ -200,13 +228,13 @@ holler.onLoad(()=>{
                     let startmessage=""
                     const pressSStart  = document.querySelector('.pressSStart')
                     pressSStart.textContent=startmessage
-                    document.querySelector(".loading").style.display = "none";
-                    document.querySelector(".votingPage").style.display = "block";
-                    document.querySelector(".p1vote").style.display = "block";
-                    document.querySelector(".p2vote").style.display = "block";
-                    document.querySelector(".p3vote").style.display = "block";
-                    document.querySelector(".p4vote").style.display = "block";
-                    document.querySelector(".p5vote").style.display = "block";
+                    // document.querySelector(".loading").style.display = "none";
+                    // document.querySelector(".votingPage").style.display = "block";
+                    // document.querySelector(".p1vote").style.display = "block";
+                    // document.querySelector(".p2vote").style.display = "block";
+                    // document.querySelector(".p3vote").style.display = "block";
+                    // document.querySelector(".p4vote").style.display = "block";
+                    // document.querySelector(".p5vote").style.display = "block";
                     
 
                 }
@@ -227,7 +255,7 @@ holler.onLoad(()=>{
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
             madLibsPrintout.textContent = withoutCommas    
           clear1.onclick= function(){
-          
+            
             madLibsPrintout.textContent=""
             parts=[]
             console.log("hghghghghgg")
@@ -254,9 +282,9 @@ holler.onLoad(()=>{
 
 
 
-        P1Button.onclick = function(){
-            document.querySelector(".giphyy").style.display = "block";
-        }
+    //    P1Button .onclick = function(){
+    //         document.querySelector(".giphyy").style.display = "block";
+    //     }
     })
 }, 1000)
 })

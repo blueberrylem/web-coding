@@ -5,11 +5,10 @@ body {
     
     background-color: black;
     
-    color: rgb(55, 255, 0);
+    color: rgb(255, 255, 0);
     size: 20px;
     font-size: larger;
-    /* background-image:url('ar.jpg'); */
- 
+
 }
 
 .loading{
@@ -88,23 +87,28 @@ body {
     display: block;
 }
 .madLibPrintout{
+    color: rgb(4, 0, 255);
     display:none
 }
 .p1vote{
-    display:none
-
+    display:none;
+    color: rgb(255, 0, 242);
 }
 .p2vote{
-    display:none
+    display:none;
+    color: rgb(0, 255, 76);
 }
 .p3vote{
-    display:none
+    display:none;
+    color: rgb(255, 0, 102);
 }
 .p4vote{
-    display:none
+    display:none;
+    color: rgb(0, 179, 255);
 }
 .p5vote{
-    display:none
+    color: rgb(187, 255, 0);
+    display:none;
 }
 /* .trolling{
     display:none;
@@ -125,6 +129,6 @@ body {
 .done{
     display:none
 }
-.showButton{
+.show{
     display:none
 }
