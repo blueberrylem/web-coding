@@ -15,12 +15,22 @@ holler.onLoad(()=>{
         let subjectDropdown = document.getElementById("subject")
         let subjectDropdown2 = document.getElementById("subjects")
         let P1Button = document.querySelector(".P1Button")
+        let P2Button=document.querySelector(".P2Button")
+        let P3Button=document.querySelector(".P3Button")
+        let P4Button=document.querySelector(".P4Button")
+        let P5Button=document.querySelector(".P5Button")
         let n1SubmitButton=document.querySelector(".n1SubmitButton")
         let n2SubmitButton=document.querySelector(".n2SubmitButton")
         let n3SubmitButton=document.querySelector(".n3SubmitButton")
         let n4SubmitButton=document.querySelector(".n4SubmitButton")
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
         let madLibsPrintout=document.querySelector(".madLibsPrintout")
+        let done=document.querySelector(".done")
+        const PButtons=[P1Button,P2Button,P3Button,P4Button,P5Button]
+
+        PButtons.onclick=function(){
+            document.querySelector(".done").style.display = "block";
+        }
         n1SubmitButton.onclick = function(){
             document.querySelector(".cclear").style.display = "block";
             noun1.value = '';
