@@ -1,7 +1,7 @@
 holler.onLoad(()=>{
     setTimeout(()=> {
     holler.me(()=>{
-
+        let name = document.querySelector(".name1").value
         let saving=[]
         let noun1 = document.querySelector(".noun1").value
         let noun2 = document.querySelector(".noun2").value
@@ -70,14 +70,14 @@ holler.onLoad(()=>{
             console.log(randdom)
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
-            event1=randh
+            event1=(name+"says: "+" "+randh)
               holler.appInstance.notifyClients(event1)
             playAudio() // const collection=[noun1]
             document.querySelector(".showButton").style.display = "block"
-            showButton.onclick = function(){
+            // showButton.onclick = function(){
 
-                madLibsPrintout.textContent = saving
-            }
+            //     madLibsPrintout.textContent = saving
+            // }
             // let story2Real=[]
             // if (randStory=story2){
             //     event1=[story2, noun1, story2a]
