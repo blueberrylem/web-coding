@@ -26,6 +26,15 @@ holler.onLoad(()=>{
         let n5SubmitButton=document.querySelector(".n5SubmitButton")
         let madLibsPrintout=document.querySelector(".madLibsPrintout")
         let done=document.querySelector(".done")
+        let story1=["I wanted to get home as fast as my  "+noun1+" "+"could carry me."]
+        let story2=["It was a dark and"] 
+        let story2a=[verb1+"night"]
+        let story3=["I screamed so loudly, I woke up every "+adverb1+" in the forest."]
+        var stories=[story1,story2,story3]
+        var randStory = stories[Math.floor(Math.random() * stories.length)];
+        console.log(randStory);
+        
+        
         // const PButtons=[P1Button,P2Button,P3Button,P4Button,P5Button]
 
         // PButtons.onclick=function(){
@@ -34,57 +43,74 @@ holler.onLoad(()=>{
         // }
         n1SubmitButton.onclick = function(){
             document.querySelector(".cclear").style.display = "block";
+        let story1=["The monster lifted me off the"+noun1]
+        let story2=["It was dark and" +verb1] 
+        let story3=["I screamed so loudly, I woke up every "+adverb1]
+        var stories=[story1,story2,story3]
+        var randStory = stories[Math.floor(Math.random() * stories.length)];
+        console.log(randStory);
             noun1.value = '';
-            let event1 = document.querySelector(".noun1").value
+            let inputt = document.querySelector(".noun1").value
+            let event1a=(story1+" "+" "+inputt)
+            let event1ab=(story2+" "+" "+inputt)
+            let event1abc=(story3+" "+" "+inputt)
+            var randdom=[event1a,event1ab,event1abc]
+            console.log(randdom)
+            var randh = randdom[Math.floor(Math.random() * randdom.length)];
+            console.log(randh);
+            event1=randh
+            
             // const collection=[noun1]
             playAudio()
-        
+            // let story2Real=[]
+            // if (randStory=story2){
+            //     event1=[story2, noun1, story2a]
+            // }
             holler.appInstance.notifyClients(event1)
-            console.log("submitted"+" "+" "+event1)
-        }
-        n2SubmitButton.onclick = function(){
-            document.querySelector(".cclear").style.display = "block";
-            verb1.value = '';
-            playAudio()
-            let event2 = document.querySelector(".verb1").value
-            const madLibsPrintout = document.querySelector('.madLibsPrintout')
+            console.log("submitted"+" "+" "+story2Real)
+        // n2SubmitButton.onclick = function(){
+        //     document.querySelector(".cclear").style.display = "block";
+        //     verb1.value = '';
+        //     playAudio()
+        //     let event2 = document.querySelector(".verb1").value
+        //     const madLibsPrintout = document.querySelector('.madLibsPrintout')
            
-            // madLibsPrintout.textContent = message
-            holler.appInstance.notifyClients(event2)
-        }
-        n3SubmitButton.onclick = function(){
-            document.querySelector(".cclear").style.display = "block";
+        //     // madLibsPrintout.textContent = message
+        //     holler.appInstance.notifyClients(event2)
+        // }
+        // n3SubmitButton.onclick = function(){
+        //     document.querySelector(".cclear").style.display = "block";
 
-            adverb1.value = '';
-            let event3 = document.querySelector(".adverb1").value
-            // const collection=[noun1]
-            playAudio()
+        //     adverb1.value = '';
+        //     let event3 = document.querySelector(".adverb1").value
+        //     // const collection=[noun1]
+        //     playAudio()
         
-            holler.appInstance.notifyClients(event3)
-            console.log("submitted"+" "+" "+event3)
-        }
-        n4SubmitButton.onclick = function(){
-            document.querySelector(".cclear").style.display = "block";
-            noun1.value = '';
-            let event4 = document.querySelector(".noun2").value
-            // const collection=[noun1]
-            playAudio()
+        //     holler.appInstance.notifyClients(event3)
+        //     console.log("submitted"+" "+" "+event3)
+        // }
+        // n4SubmitButton.onclick = function(){
+        //     document.querySelector(".cclear").style.display = "block";
+        //     noun1.value = '';
+        //     let event4 = document.querySelector(".noun2").value
+        //     // const collection=[noun1]
+        //     playAudio()
         
-            holler.appInstance.notifyClients(event4)
-            console.log("submitted"+" "+" "+event4)
-        }
-        n5SubmitButton.onclick = function(){
-            document.querySelector(".cclear").style.display = "block";
-            verb2.value = '';
-            let event5 = document.querySelector(".verb2").value
-            // const collection=[noun1]
-            playAudio()
+        //     holler.appInstance.notifyClients(event4)
+        //     console.log("submitted"+" "+" "+event4)
+        // }
+        // n5SubmitButton.onclick = function(){
+        //     document.querySelector(".cclear").style.display = "block";
+        //     verb2.value = '';
+        //     let event5 = document.querySelector(".verb2").value
+        //     // const collection=[noun1]
+        //     playAudio()
         
-            holler.appInstance.notifyClients(event5)
-            console.log("submitted"+" "+" "+event5)
-        }
+        //     holler.appInstance.notifyClients(event5)
+        //     console.log("submitted"+" "+" "+event5)
+        // }
 
-      
+        }
 
         const buttons=[createButtons, startButton, nextButton, P1Button]
         let parts=[]
@@ -192,8 +218,7 @@ holler.onLoad(()=>{
         })
         
        
-       
-        
+    
 
 
         // selectorPagesTeleporter()
