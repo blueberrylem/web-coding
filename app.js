@@ -219,7 +219,7 @@ holler.onLoad(()=>{
                     console.log(winner2+"winner2")
                 
                 }else if(event1=="Voted For Player 3"){
-                    winner3=winner+1
+                    winner3=winner3+1
                 }else if(event1=="Voted For Player 4"){
                     winner4=winner4+1
                 }else if(event1=="Voted For Player 5"){
