@@ -241,6 +241,30 @@ holler.onLoad(()=>{
                 if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
                     event1="Player 5 Wins" 
                 }
+                
+
+                if (winner1=winner2&&winner1==winner3&&winner1==winner4&&winner1==winner5) {
+                    console.log("yeahhhhh")
+                    event1="No one wins (Tie)" 
+                }
+                if (winner2=winner3&&winner2==winner4&&winner2==winner5&&winner2==winner1) {
+                    event1="No one wins (Tie)" 
+                }
+                if (winner3=winner4&&winner3==winner5&&winner3==winner2&&winner3==winner1) {
+                    event1="No one wins (Tie)"
+                }
+                if (winner4=winner5&&winner4==winner3&&winner4==winner2&&winner4==winner1) {
+                    event1="No one wins (Tie)" 
+                }
+                if (winner5=winner1&&winner5==winner2&&winner5==winner3&&winner5==winner4) {
+                    event1="No one wins (Tie)" 
+                }
+
+
+
+
+
+
                 xa.play()
                 console.log(`Client event received: ${event1}`)
 
