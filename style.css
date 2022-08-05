@@ -115,7 +115,6 @@ body {
     
     display: block;
     margin: auto;
-    width: 60%;
     padding: 10px;
     text-align: center;
     padding: 70px 0;
@@ -126,12 +125,21 @@ body {
     display: block;
 }
 .madLibPrintout{
+    position: absolute;
+    display: block;
+    left: 30vw;
+    animation: color-change 6s infinite;
+}
+    /* text-align: center;
+    display: block;
+    margin: auto;
+    width: 60%;
     font-family: cursive;
     font-size: x-large;
     color: rgb(4, 0, 255);
     display:none
     text-shadow 0 0 2px red;
-}
+} */
 .p1vote{
     display:none;
     color: rgb(255, 0, 242);
