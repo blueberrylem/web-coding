@@ -6,7 +6,7 @@ body {
     background-color: black;
     
     color: rgb(255, 255, 0);
-    size: 20px;
+    size: 100pxe;
     font-size: larger;
     animation: color-change 6s infinite;
 }
@@ -29,6 +29,7 @@ body {
     width: 60%;
     border: 3px solid #73AD21;
     padding: 10px;
+    size: 100px;
     text-align: center;
     padding: 70px 0;
     font-size: xx-large;
@@ -70,15 +71,7 @@ body {
         color: pink;
       }
     
-    /* 0% { color: red; }
-    50% { color: blue; }
-    100% { color: red; }
-    0% {color:red;}
-    50% {color:rgb(0, 255, 76)}
-    100%{color:aquamarine}
-    0%{color:aquamarine}
-    50%{color:aqua}
-    100%{color:gold} */
+   
   }
 .player{
     display: block;
@@ -133,7 +126,8 @@ body {
     display: block;
 }
 .madLibPrintout{
-   
+    font-family: cursive;
+    font-size: x-large;
     color: rgb(4, 0, 255);
     display:none
     text-shadow 0 0 2px red;
@@ -178,5 +172,8 @@ body {
     display:none
 }
 .show{
+    display:none
+}
+.stop{
     display:none
 }
