@@ -1,6 +1,11 @@
 holler.onLoad(()=>{
     setTimeout(()=> {
         holler.me(()=>{
+            let winner1=0
+            let winner2=0
+            let winner3=0
+            let winner4=0
+            let winner5=0
             let name = document.querySelector(".name1")
             let saving=[]
             let noun1 = document.querySelector(".noun1").value
@@ -117,6 +122,7 @@ holler.onLoad(()=>{
                 document.querySelector(".p5vote").style.display = "block";
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
+               
             }
             P2Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
@@ -199,32 +205,61 @@ holler.onLoad(()=>{
                 }
                 
             }
-        
+            
             holler.onClientEvent(event1=>{
-                xa.play()
-                console.log(`Client event received: ${event1}`)
+                if (event1=="Voted For Player 1"){
+                    
+                    winner1=winner1+1
+                    console.log(winner1+"winner1")
+                
+                }else if(event1=="Voted For Player 2"){
+                    winner2=winner2+1
+                    console.log(winner2+"winner2")
+                
+                }else if(event1=="Voted For Player 3"){
+                    winner3=winner+1
+                }else if(event1=="Voted For Player 4"){
+                    winner4=winner4+1
+                }else if(event1=="Voted For Player 5"){
+                    winner5=winner5+1
+                }else{
+                    xa.play()
+                    console.log(`Client event received: ${event1}`)
 
-                parts.push(event1+" "+"  ") 
-                saving.push(event1+" "+"  ")
-                
-                console.log(event1)
-                // const message=[event1]
-                console.log(parts)
-                // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
-                const withoutCommas = parts.join(' ');
-                const madLibsPrintout = document.querySelector('.madLibsPrintout')
-                const para = document.createElement("div");
-                para.innerText=event1;
-                madLibsPrintout.appendChild(para);
-                
-                // madLibsPrintout.textContent = withoutCommas    
+                    parts.push(event1+" "+"  ") 
+                    saving.push(event1+" "+"  ")
+                    
+                    console.log(event1)
+                    // const message=[event1]
+                    console.log(parts)
+                    // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+                    const withoutCommas = parts.join(' ');
+                    const madLibsPrintout = document.querySelector('.madLibsPrintout')
+                    const para = document.createElement("div");
+                    para.innerText=event1;
+                    madLibsPrintout.appendChild(para);
+                    
+                    // madLibsPrintout.textContent = withoutCommas    
+                }
+                    if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
+                        event1="Player 1 Wins" 
+                    }
+                    if (winner2>winner3&&winner2>winner4&&winner2>winner5&&winner2>winner1) {
+                        event1="Player 2 Wins" 
+                     }
+                    if (winner3>winner4&&winner3>winner5&&winner3>winner2&&winner3>winner1) {
+                        event1="Player 3 Wins"
+                     }
+                    if (winner4>winner5&&winner4>winner3&&winner4>winner2&&winner4>winner1) {
+                        event1="Player 4 Wins" 
+                     }
+                    if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
+                        event1="Player 5 Wins" 
+                     }
+                    
+                     
 
-                clear1.onclick= function(){
-                
-                    madLibsPrintout.textContent=""
-                    parts=[]
-                    console.log("hghghghghgg")
-                } 
+               
             })
     
         })
