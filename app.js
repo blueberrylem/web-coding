@@ -59,7 +59,7 @@ holler.onLoad(()=>{
         let story12=["Next you bake it in a very hot"]
         let story13=["Now he's dragging you to a bottomless"]
         let story14=["Every morning after class we beg for"]
-        let story15=[" If you won’t take our word for it, there’s scientific proof of the old adage that laughter is the best "]
+        let story15=[" If you won't take our word for it, there's scientific proof of the old adage that laughter is the best "]
         let story16=["Life is a soup and I am a"]
         let story17=["Life is short smile while you still have"]
         let story18=["Why would you eat a "]
@@ -95,7 +95,7 @@ holler.onLoad(()=>{
             console.log(randdom)
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
-            event1=(name +" "+ "says: "+" "+randh)
+            event1=("User, aka"+" "+name+ " says: "+" "+randh)
             console.log("event 1: " + event1)
               holler.appInstance.notifyClients(event1)
             playAudio() // const collection=[noun1]
