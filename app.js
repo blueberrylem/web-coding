@@ -32,10 +32,10 @@ holler.onLoad(()=>{
             let n5SubmitButton=document.querySelector(".n5SubmitButton")
             let madLibsPrintout=document.querySelector(".madLibsPrintout")
             let done=document.querySelector(".done")
-        
+            let parts=[]
             n1SubmitButton.onclick = function(){
                 document.querySelector(".n1SubmitButton").style.display = "none";
-                parts=[]
+                
                // document.querySelector(".cclear").style.display = "block";
                 let story1=["The monster lifted me off the"+noun1]
                 let story2=["It was dark and" +verb1] 
@@ -121,32 +121,32 @@ holler.onLoad(()=>{
                 event1=("Voted For Player 1")
                 document.querySelector(".p5vote").style.display = "block";
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent="n"
+                madLibsPrintout.textContent=""
                
             }
             P2Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 2")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent="n"
+                madLibsPrintout.textContent=""
             }
             P3Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent="n"
+                madLibsPrintout.textContent=""
             }
             P4Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent="n"
+                madLibsPrintout.textContent=""
             }
             P5Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 1")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent="n"
+                madLibsPrintout.textContent=""
             }
             
 
@@ -209,7 +209,8 @@ holler.onLoad(()=>{
             holler.onClientEvent(event1=>{
                 console.log(event1)
                 if (event1=="Voted For Player 1"){
-                    
+
+                  
                     winner1=winner1+1
                     console.log(winner1+"winner1")
                 
@@ -223,40 +224,41 @@ holler.onLoad(()=>{
                     winner4=winner4+1
                 }else if(event1=="Voted For Player 5"){
                     winner5=winner5+1
-                }else{
-                    xa.play()
-                    console.log(`Client event received: ${event1}`)
+                }
+                xa.play()
+                console.log(`Client event received: ${event1}`)
 
-                    parts.push(event1+" "+"  ") 
-                    saving.push(event1+" "+"  ")
-                    
-                    console.log(event1)
-                    // const message=[event1]
-                    console.log(parts)
-                    // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
-                    const withoutCommas = parts.join(' ');
-                    const madLibsPrintout = document.querySelector('.madLibsPrintout')
-                    const para = document.createElement("div");
-                    para.innerText=event1;
-                    madLibsPrintout.appendChild(para);
+                parts.push(event1+" "+"  ") 
+                saving.push(event1+" "+"  ")
+                
+                console.log(event1)
+                // const message=[event1]
+                console.log(parts)
+                // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
+                const withoutCommas = parts.join(' ');
+                const madLibsPrintout = document.querySelector('.madLibsPrintout')
+                const para = document.createElement("div");
+                para.innerText=event1;
+                madLibsPrintout.appendChild(para);
                     
                     // madLibsPrintout.textContent = withoutCommas    
+                
+                if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
+                    console.log("yeahhhhh")
+                    event1=("Player 1 Wins") 
                 }
-                    if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
-                        event1="Player 1 Wins" 
-                    }
-                    if (winner2>winner3&&winner2>winner4&&winner2>winner5&&winner2>winner1) {
-                        event1="Player 2 Wins" 
-                     }
-                    if (winner3>winner4&&winner3>winner5&&winner3>winner2&&winner3>winner1) {
-                        event1="Player 3 Wins"
-                     }
-                    if (winner4>winner5&&winner4>winner3&&winner4>winner2&&winner4>winner1) {
-                        event1="Player 4 Wins" 
-                     }
-                    if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
-                        event1="Player 5 Wins" 
-                     }
+                if (winner2>winner3&&winner2>winner4&&winner2>winner5&&winner2>winner1) {
+                    event1="Player 2 Wins" 
+                }
+                if (winner3>winner4&&winner3>winner5&&winner3>winner2&&winner3>winner1) {
+                    event1="Player 3 Wins"
+                }
+                if (winner4>winner5&&winner4>winner3&&winner4>winner2&&winner4>winner1) {
+                    event1="Player 4 Wins" 
+                }
+                if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
+                    event1="Player 5 Wins" 
+                }
                     
                      
 
