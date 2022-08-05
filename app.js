@@ -121,32 +121,32 @@ holler.onLoad(()=>{
                 event1=("Voted For Player 1")
                 document.querySelector(".p5vote").style.display = "block";
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent=""
+                madLibsPrintout.textContent="n"
                
             }
             P2Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 2")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent=""
+                madLibsPrintout.textContent="n"
             }
             P3Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent=""
+                madLibsPrintout.textContent="n"
             }
             P4Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent=""
+                madLibsPrintout.textContent="n"
             }
             P5Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
                 event1=("Voted For Player 1")
                 holler.appInstance.notifyClients(event1)
-                madLibsPrintout.textContent=""
+                madLibsPrintout.textContent="n"
             }
             
 
@@ -207,6 +207,7 @@ holler.onLoad(()=>{
             }
             
             holler.onClientEvent(event1=>{
+                console.log(event1)
                 if (event1=="Voted For Player 1"){
                     
                     winner1=winner1+1
