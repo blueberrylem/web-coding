@@ -96,6 +96,7 @@ holler.onLoad(()=>{
             var randh = randdom[Math.floor(Math.random() * randdom.length)];
             console.log(randh);
             event1=(name +" "+ "says: "+" "+randh)
+            console.log("event 1: " + event1)
               holler.appInstance.notifyClients(event1)
             playAudio() // const collection=[noun1]
             document.querySelector(".show").style.display = "block"}
@@ -280,7 +281,7 @@ holler.onLoad(()=>{
             // const message= [+event1+" "+ " "+verb1+" "+ " "+adverb1+" "+ " "+noun2+" "+ " "+verb2+"."]
             const withoutCommas = parts.join(' ');
             const madLibsPrintout = document.querySelector('.madLibsPrintout')
-
+            console.log(withoutCommas+"qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq")
             const para = document.createElement("div");
             para.innerText = withoutCommas;
             madLibsPrintout.appendChild(para);
