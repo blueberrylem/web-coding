@@ -97,7 +97,7 @@ holler.onLoad(()=>{
                 document.querySelector(".nounInput").style.display = "none";
                 document.querySelector(".nounInput").style.display = "none";
                 // document.querySelector(".stop").style.display = "block";
-                madLibsPrintout.textContent = parts+"The Player with the most votes wins"
+              //  madLibsPrintout.textContent = saving+"The Player with the most votes wins"
                 
 
                 document.querySelector(".loading").style.display = "block";
@@ -110,20 +110,25 @@ holler.onLoad(()=>{
             }
 
             P1Button.onclick = function(){
+                document.querySelector(".p1vote").style.display = "none";
                 event1=("Player One Wins!")
                 holler.appInstance.notifyClients(event1)}
             P2Button.onclick = function(){
+                document.querySelector(".p2vote").style.display = "none";
                 event1=("Player Two Wins!")
                 holler.appInstance.notifyClients(event1)}
             P3Button.onclick = function(){
+                document.querySelector(".p3vote").style.display = "none";
                 event1=("Player Three Wins!")
                 holler.appInstance.notifyClients(event1)
             }
             P4Button.onclick = function(){
+                document.querySelector(".p4vote").style.display = "none";
                 event1=("Player Four Wins!")
                 holler.appInstance.notifyClients(event1)
             }
             P5Button.onclick = function(){
+                document.querySelector(".p5vote").style.display = "none";
                 event1=("Player Five Wins!")
                 holler.appInstance.notifyClients(event1)
             }
