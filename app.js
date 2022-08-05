@@ -225,6 +225,22 @@ holler.onLoad(()=>{
                 }else if(event1=="Voted For Player 5"){
                     winner5=winner5+1
                 }
+                if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
+                    console.log("yeahhhhh")
+                    event1=("Player 1 Wins") 
+                }
+                if (winner2>winner3&&winner2>winner4&&winner2>winner5&&winner2>winner1) {
+                    event1="Player 2 Wins" 
+                }
+                if (winner3>winner4&&winner3>winner5&&winner3>winner2&&winner3>winner1) {
+                    event1="Player 3 Wins"
+                }
+                if (winner4>winner5&&winner4>winner3&&winner4>winner2&&winner4>winner1) {
+                    event1="Player 4 Wins" 
+                }
+                if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
+                    event1="Player 5 Wins" 
+                }
                 xa.play()
                 console.log(`Client event received: ${event1}`)
 
@@ -243,23 +259,7 @@ holler.onLoad(()=>{
                     
                     // madLibsPrintout.textContent = withoutCommas    
                 
-                if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
-                    console.log("yeahhhhh")
-                    event1=("Player 1 Wins") 
-                }
-                if (winner2>winner3&&winner2>winner4&&winner2>winner5&&winner2>winner1) {
-                    event1="Player 2 Wins" 
-                }
-                if (winner3>winner4&&winner3>winner5&&winner3>winner2&&winner3>winner1) {
-                    event1="Player 3 Wins"
-                }
-                if (winner4>winner5&&winner4>winner3&&winner4>winner2&&winner4>winner1) {
-                    event1="Player 4 Wins" 
-                }
-                if (winner5>winner1&&winner5>winner2&&winner5>winner3&&winner5>winner4) {
-                    event1="Player 5 Wins" 
-                }
-                    
+                
                      
 
                
