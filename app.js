@@ -29,8 +29,9 @@ holler.onLoad(()=>{
             let done=document.querySelector(".done")
         
             n1SubmitButton.onclick = function(){
+                document.querySelector(".n1SubmitButton").style.display = "none";
                 parts=[]
-                document.querySelector(".cclear").style.display = "block";
+               // document.querySelector(".cclear").style.display = "block";
                 let story1=["The monster lifted me off the"+noun1]
                 let story2=["It was dark and" +verb1] 
                 let story3=["I screamed so loudly, I woke up every "+adverb1]
@@ -82,23 +83,24 @@ holler.onLoad(()=>{
                 var randh = randdom[Math.floor(Math.random() * randdom.length)];
                 console.log(randh);
                 console.log("name"+name.value)
-                console.log("hhhhhhhhhhhhhhhhh"+randh)
-                console.log("James Coded this 99% and Micah coded it 1 percent")
+                // console.log("hhhhhhhhhhhhhhhhh"+randh)
+                // console.log("James Coded this 99% and Micah coded it 1 percent")
                 event1=(name.value+ " says: "+" "+randh)
                 console.log("event 1: " + event1)
                 
                 holler.appInstance.notifyClients(event1)
                 playAudio() // const collection=[noun1]
                 document.querySelector(".show").style.display = "block"
+
             }
 
             show.onclick = function(){
-                console.log("fdffdfdfmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+                document.querySelector(".show").style.display = "none";
+                // console.log("fdffdfdfmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
                 document.querySelector(".nounInput").style.display = "none";
                 document.querySelector(".nounInput").style.display = "none";
                 // document.querySelector(".stop").style.display = "block";
               //  madLibsPrintout.textContent = saving+"The Player with the most votes wins"
-                
                 document.querySelector(".votingg").style.display = "block";
                 document.querySelector(".loading").style.display = "block";
                 document.querySelector(".loading").style.display = "none";
@@ -111,32 +113,32 @@ holler.onLoad(()=>{
 
             P1Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
-                event1=("Player One Wins!")
+                event1=("Voted For Player 1")
                 document.querySelector(".p5vote").style.display = "block";
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
             }
             P2Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
-                event1=("Player Two Wins!")
+                event1=("Voted For Player 2")
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
             }
             P3Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
-                event1=("Player Three Wins!")
+                event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
             }
             P4Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
-                event1=("Player Four Wins!")
+                event1=("Voted For Player 3")
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
             }
             P5Button.onclick = function(){
                 document.querySelector(".votingg").style.display = "none";
-                event1=("Player Five Wins!")
+                event1=("Voted For Player 1")
                 holler.appInstance.notifyClients(event1)
                 madLibsPrintout.textContent=""
             }
@@ -156,7 +158,7 @@ holler.onLoad(()=>{
                     if ( subjectDropdown2.value == "1"){
                         console.log("you did it")
                         document.querySelector(".nounInput").style.display = "block";
-                        
+                        document.querySelector(".n1SubmitButton").style.display = "block";
                         document.querySelector(".startScreen").style.display = "none";
                     }
                     if ( subjectDropdown2.value == "2"){
