@@ -84,7 +84,7 @@ holler.onLoad(()=>{
                 let eventc=(story18+" "+" "+inputt)
                 let eventv=(story19+" "+" "+inputt)
                 let eventb=(story20+" "+" "+inputt)
-                var randdom=[event1a,event1abc,event1abcd,event2q,event2w,event2e,event6f,event2t, event2ttt, event2tt, event2tttt, eventat, eventaatt, eventatt, eventz, eventc, eventb,eventv, eventx]
+                var randdom=[event1a,event1abc,event1abcd,event2q,event2w,event2e,event2t, event2ttt, event2tt, event2tttt, eventat, eventaatt, eventatt, eventz, eventc, eventb,eventv, eventx]
                 console.log(randdom)
                 var randh = randdom[Math.floor(Math.random() * randdom.length)];
                 console.log(randh);
@@ -231,6 +231,7 @@ holler.onLoad(()=>{
                     winner5=winner5+1
                 }
                 if (grr>0) {
+                    console.log("dfddf")
                     if (winner1>winner2&&winner1>winner3&&winner1>winner4&&winner1>winner5) {
                         console.log("yeahhhhh")
                         event1=("Player 1 Wins") 
@@ -263,7 +264,7 @@ holler.onLoad(()=>{
                     if (winner5==winner1&&winner5==winner2&&winner5==winner3&&winner5==winner4) {
                         event1="No one wins (Tie)" 
                     }
-                }s
+                }
 
 
 
