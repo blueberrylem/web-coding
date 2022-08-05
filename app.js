@@ -99,7 +99,7 @@ holler.onLoad(()=>{
                 // document.querySelector(".stop").style.display = "block";
               //  madLibsPrintout.textContent = saving+"The Player with the most votes wins"
                 
-
+                document.querySelector(".votingg").style.display = "block";
                 document.querySelector(".loading").style.display = "block";
                 document.querySelector(".loading").style.display = "none";
                 document.querySelector(".p1vote").style.display = "block";
@@ -110,27 +110,35 @@ holler.onLoad(()=>{
             }
 
             P1Button.onclick = function(){
-                document.querySelector(".p1vote").style.display = "none";
+                document.querySelector(".votingg").style.display = "none";
                 event1=("Player One Wins!")
-                holler.appInstance.notifyClients(event1)}
+                document.querySelector(".p5vote").style.display = "block";
+                holler.appInstance.notifyClients(event1)
+                madLibsPrintout.textContent=""
+            }
             P2Button.onclick = function(){
-                document.querySelector(".p2vote").style.display = "none";
+                document.querySelector(".votingg").style.display = "none";
                 event1=("Player Two Wins!")
-                holler.appInstance.notifyClients(event1)}
+                holler.appInstance.notifyClients(event1)
+                madLibsPrintout.textContent=""
+            }
             P3Button.onclick = function(){
-                document.querySelector(".p3vote").style.display = "none";
+                document.querySelector(".votingg").style.display = "none";
                 event1=("Player Three Wins!")
                 holler.appInstance.notifyClients(event1)
+                madLibsPrintout.textContent=""
             }
             P4Button.onclick = function(){
-                document.querySelector(".p4vote").style.display = "none";
+                document.querySelector(".votingg").style.display = "none";
                 event1=("Player Four Wins!")
                 holler.appInstance.notifyClients(event1)
+                madLibsPrintout.textContent=""
             }
             P5Button.onclick = function(){
-                document.querySelector(".p5vote").style.display = "none";
+                document.querySelector(".votingg").style.display = "none";
                 event1=("Player Five Wins!")
                 holler.appInstance.notifyClients(event1)
+                madLibsPrintout.textContent=""
             }
             
 
